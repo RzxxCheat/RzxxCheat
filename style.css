@@ -1,0 +1,602 @@
+/* Reset dasar untuk menghilangkan margin dan padding default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Gaya untuk body */
+body {
+    font-family: 'Candara', sans-serif; /* Mengubah font menjadi Candara */
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: rgba(0, 123, 255, 0.4); /* Warna dengan transparansi */
+    text-align: center;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 15px; /* Sudut membulat agar terlihat mengambang */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Efek bayangan */
+    margin: 20px auto; /* Memberi jarak antara navbar dan header */
+    width: 80%; /* Lebar menyesuaikan dengan sedikit margin */
+    height: 200px;
+    overflow-y: auto;
+    max-width: 1200px; /* Batas maksimum lebar */
+    position: relative;
+    z-index: 1; /* Agar berada di atas elemen lain */
+}
+
+header:hover {
+    background: linear-gradient(135deg, #ff6a00, #ee0979); /* Warna berubah saat hover */
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: Candara;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+/* Gaya untuk section fitur */
+#features {
+    margin: 40px 0;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#features ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#features li {
+    font-size: 1.2em;
+    margin: 10px 0;
+    width: 250px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Animasi gradien teks */
+.animated-text {
+    font-size: 2.5em; /* Ukuran font */
+    font-weight: bold; /* Teks tebal */
+    background: linear-gradient(90deg, #ff6a00, #f4f4f4, #007BFF); /* Warna gradien */
+    background-size: 300%; /* Ukuran latar belakang */
+    -webkit-background-clip: text; /* Klip latar belakang ke teks (untuk Webkit) */
+    -webkit-text-fill-color: transparent; /* Mengisi teks dengan transparan */
+    animation: gradientMove 3s linear infinite; /* Animasi gradien */
+    text-align: center; /* Rata tengah */
+    margin: 20px 0;
+}
+
+/* Keyframes untuk animasi gradien */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Gaya untuk tombol ajakan bertindak */
+#cta {
+    background-color: #red;  /* Warna sama dengan header */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-radius: 15px; /* Sudut membulat seperti header */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7); /* Efek bayangan seperti header */
+    margin: 20px auto; /* Memberi jarak antar elemen */
+    width: 80%; /* Menyesuaikan lebar */
+    height: 270px;
+    overflow: auto;
+    max-width: 1200px; /* Batas maksimum lebar */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.cta-title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    pointer-events: none; /* Menyembunyikan interaksi pengguna pada teks */
+}
+
+#cta .btn {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #white; /* Hijau */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#cta .btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+#cta h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 1.0), 0 1px 3px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek mengambang */
+    transform: translateY(-5px); /* Efek melayang ke atas */
+}
+
+#cta p {
+    font-size: 1.1em;
+    font-weight: bold;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.8), 0 1px 3px rgba(0, 0, 0, 0.4); /* Bayangan untuk teks paragraf */
+}
+
+#cta a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white; /* Ubah latar belakang menjadi putih */
+    color: #28a745; /* Warna teks hijau */
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan agar tombol terangkat */
+    transition: all 0.3s ease; /* Transisi halus untuk perubahan efek */
+    transform: translateY(0); /* Tombol dalam posisi normal */
+    border: 2px solid #28a745; /* Tambahkan border dengan warna hijau */
+}
+
+#cta a:hover {
+    background-color: #28a745; /* Warna latar belakang berubah menjadi hijau saat hover */
+    color: white; /* Warna teks menjadi putih saat hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Efek bayangan lebih besar saat hover */
+    transform: translateY(-5px); /* Tombol terangkat sedikit saat hover */
+}
+
+/* Menambahkan video sebagai latar belakang */
+.video-background {
+    position: fixed; /* Menetapkan posisi video untuk mengisi seluruh layar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Pastikan video berada di belakang konten lainnya */
+}
+
+/* Menyesuaikan tampilan video */
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mengatur video agar memenuhi layar tanpa merusak rasio */
+}
+
+/* Menambahkan konten di atas video */
+.content {
+    position: relative;
+    z-index: 1; /* Konten akan berada di atas video */
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    #background-video {
+        object-position: center; /* Penyesuaian video di perangkat kecil */
+    }
+
+    header {
+        padding: 30px 20px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+}
+
+/* Responsif untuk desktop */
+@media (min-width: 769px) {
+    header {
+        padding: 50px 30px;
+    }
+
+    section {
+        padding: 60px 40px;
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.bg-gradient-moving {
+    background: linear-gradient(45deg, #e74c3c, #2c3e50, #3498db);
+    background-size: 300% 300%;
+    animation: gradientMove 5s ease infinite;
+}
+/* Gradien merah ke hitam */
+.bg-gradient-red-black {
+    background: linear-gradient(to right, #e74c3c, #2c3e50);
+}
+
+button {
+    font-size: 1.2em;
+    padding: 15px 30px;
+    background-color: #white;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #white;
+    transform: scale(1.05);
+}
+
+/* Gaya untuk footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Media Queries untuk Responsif */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    #features h2 {
+        font-size: 1.8em;
+    }
+
+    #features li {
+        font-size: 1em;
+        width: 220px;
+    }
+
+    button {
+        font-size: 1.1em;
+        padding: 12px 25px;
+    }
+
+    footer {
+        font-size: 0.9em;
+    }
+}
+
+/* Responsif untuk layar kecil (ponsel) */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    #features h2 {
+        font-size: 1.6em;
+    }
+
+    #features li {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    #cta h2 {
+        font-size: 1.6em;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+/* Gaya untuk Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;  /* Menjaga navbar tetap di atas konten lainnya */
+    background-color: #007BFF;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Menambahkan sedikit bayangan */
+}
+
+.navbar-scrolled {
+    background-color: #0056b3;  /* Warna navbar berubah saat scroll */
+}
+
+/* Gaya untuk navbar-toggler (ikonnya) */
+.navbar-toggler {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    z-index: 10;
+}
+
+.navbar-toggler span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler span:nth-child(1) {
+    top: 0;
+}
+
+.navbar-toggler span:nth-child(2) {
+    top: 12px;
+}
+
+.navbar-toggler span:nth-child(3) {
+    top: 24px;
+}
+
+.navbar-toggler.active span:nth-child(1) {
+    transform: translateY(12px) rotate(45deg);
+}
+
+.navbar-toggler.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar-toggler.active span:nth-child(3) {
+    transform: translateY(-12px) rotate(-45deg);
+}
+
+.navbar-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #007BFF;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu.open {
+    display: flex;
+}
+
+.navbar-menu li {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+/* Gaya untuk logo di navbar */
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Menyusun logo dan teks dalam satu baris */
+}
+
+.navbar-brand .logo {
+    width: 30px; /* Ukuran logo */
+    height: auto;
+    margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+.navbar-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Transisi untuk animasi menu */
+.navbar-collapse {
+    transition: transform 0.3s ease; /* Transisi halus saat navbar terbuka dan tertutup */
+    transform: translateX(-100%); /* Menu akan tersembunyi di luar layar di awal */
+}
+
+/* Ketika menu terbuka */
+.navbar-collapse.show {
+    transform: translateX(0); /* Menu akan muncul dengan pergeseran ke kiri */
+}
+
+/* Agar navbar lebih responsif, tambahkan sedikit animasi ketika toggler di klik */
+.navbar-toggler {
+    transition: transform 0.3s ease; /* Efek transisi pada tombol navbar */
+}
+
+.navbar-toggler.active {
+    transform: rotate(90deg); /* Rotasi 90 derajat saat tombol aktif */
+}
+
+/* Gaya untuk tombol dengan desain estetis */
+.btn-simple {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1em;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    border-radius: 12px; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek hover */
+.btn-simple:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    transform: translateY(-3px); /* Sedikit melayang */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Animasi ripple effect */
+.btn-simple::before {
+    content: "center";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: width 0.5s ease, height 0.5s ease, opacity 0.5s ease;
+}
+
+.btn-simple:hover::before {
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Elemen berjajar ke samping */
+    gap: 20px; /* Jarak antar elemen */
+    justify-items: end; /* Menempelkan item ke kanan */
+    align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Tata letak fitur dengan grid */
+
+#feature-4 {
+    grid-area: feature-4;
+}
+
+#feature-2 {
+    grid-area: feature-2;
+}
+
+#feature-3 {
+    grid-area: feature-3;
+}
+
+#feature-1 {
+    grid-area: feature-1;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.card h5 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-areas: 
+            "feature-4"
+            "feature-2"
+            "feature-3"
+            "feature-1";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tombol sederhana */
+.btn-simple {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-simple:hover {
+    background-color: #0056b3;
+}
+
+.card {
+    background: #f9f9f9;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
